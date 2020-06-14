@@ -7,16 +7,16 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <link rel="stylesheet" href="static/css/style.css">
-        <link rel="stylesheet" href="css/uikit.min.css" />
-        <script src="js/uikit.min.js"></script>
-        <script src="js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="static/css/uikit.min.css" />
+        <script src="static/js/uikit.min.js"></script>
+        <script src="static/js/uikit-icons.min.js"></script>
     </head>
 
     <body>
         <div class="parent">
             <div id="app_text">
                 <form action="/" method="POST" class="form">
-                    <input type="text" v-model="myName"><br>
+                    <input type="text" class="uk-input uk-form-width-medium" v-model="myName">
                     [[myName]]
                 </form>
             </div>
@@ -27,12 +27,13 @@
         <div class="child">Item2
             <div id="app_select">
                 <form action="/" method="POST">
-                    <select name="os">
+                    <select name="os" class="uk-select uk-form-width-medium">
                         {% for os in oslist %}
                         <option value="{{os}}">{{os}}</option>
                         {% endfor %}
                     </select>
-                    <input type="submit" value="送信"><input type="reset" value="リセット">
+                    <input type="submit" value="Submit" class="uk-button">
+                    <input type="reset" value="Reset" class="uk-button">
                 </form>
             </div>
         </div>
