@@ -1,0 +1,12 @@
+.parent {
+    background-color:#e6e6fa;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.child {
+    background-color:lightblue;
+}
+.form {
+    background-color:lightseagreen;
+}
