@@ -5,13 +5,13 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def main():
     if request.method == "GET":
-        namelist = ["Windows", "Mac", "Linux"]
-        return render_template("index.html", namelist=namelist)
+        oslist = ["Windows", "Mac", "Linux"]
+        return render_template("index.html", oslist=oslist)
     else:
         os = request.form["os"]
         print(os)
-        namelist = ["Windows", "Mac", "Linux"]
-        return render_template("index.html", namelist=namelist)
+        oslist = ["Windows", "Mac", "Linux"]
+        return render_template("index.html", oslist=oslist)
 
 
 if __name__ == "__main__":

@@ -25,8 +25,8 @@
             <div id="app_select">
                 <form action="/" method="POST">
                     <select name="os">
-                        {% for name in namelist %}
-                        <option value="{{name}}">{{name}}</option>
+                        {% for os in oslist %}
+                        <option value="{{os}}">{{os}}</option>
                         {% endfor %}
                     </select>
                     <input type="submit" value="送信"><input type="reset" value="リセット">
