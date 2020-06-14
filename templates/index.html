@@ -11,17 +11,47 @@
 
     <body>
         <div class="parent">
-            <form action="/" method="POST" class="form">
-                <input type="text">
-                text
-            </form>
+            <div id="app_text">
+                <form action="/" method="POST" class="form">
+                    <input type="text" v-model="myName"><br>
+                    [[myName]]
+                </form>
+            </div>
             <div class="child">
                 <h1>Item1</h1>
             </div>
         </div>
-        <div class="child">Item2</div>
+        <div class="child">Item2
+            <div id="app_select">
+                <form action="/" method="POST">
+                    <select name="os">
+                        {% for name in namelist %}
+                        <option value="{{name}}">{{name}}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="送信"><input type="reset" value="リセット">
+                </form>
+            </div>
+        </div>
         <div class="child">Item3</div>
 
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: "#app_text",
+                delimiters: ['[[', ']]'],
+                data: {
+                    myName: "匿名",
+                }
+            })
+            new Vue({
+                el: "#app_select",
+                delimiters: ['[[', ']]'],
+                data: {
+                    myName: "匿名",
+                }
+            })
+        </script>
     </body>
 
 </html>
